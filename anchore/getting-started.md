@@ -1,5 +1,9 @@
 # TODO: insert README here
+
 ## quick-start
+
+Mostly inspired by: https://engine.anchore.io/docs/quickstart/
+
 ### Install Anchore Engine
 ```
 # create the containers
