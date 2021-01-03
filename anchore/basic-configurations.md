@@ -1,5 +1,19 @@
 # Things for long-term thinking
 
+## High Availability
+
+Ensure docker starts
+```
+systemctl enable docker
+```
+
+Ensure the containers start
+
+docker-compose.yaml
+```
+restart: always # for each service
+```
+
 ## Archiving old image analysis
 
 ```
