@@ -1,0 +1,9 @@
+https://rdbrry.blogspot.com/2019/09/scanner-cli-projection.html
+Running as well as configuring the scanner
+The Hawkeye scanner-cli assumes that your directory construction is such that it keeps the toolchain's files on top level. Roughly, this is what it boils downwards to:
+
+    Node.js projects have got a package.json on top level
+    Ruby projects volition have got a Gemfile on top level
+    Python projects volition have got a requirements.txt on top level
+    PHP projects volition have got a composer.lock on top level
+    Java projects volition have got a build (gradle) or target (maven) folder, as well as include .java as well as .jar files
