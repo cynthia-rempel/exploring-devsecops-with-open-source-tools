@@ -49,4 +49,22 @@ Note: docs can be found at, http://localhost:8080/api/v2/doc/
 ```
 # login
 curl --header "Content-Type:application/json" --header "Accept:application/json" -X POST --data '{"username":"admin","password":"MBX..."}' http://localhost:8080/api/v2/api-token-auth/
+
+# add Business Operations, Misc product-types 
+curl --header "Content-Type:application/json" \
+  --header "Accept:application/json" \
+  -X POST --data \
+  '{"name": "Business Operations", "critical_product": true, "key_product": true, "authorized_users": []}' \
+  -u admin:AdminPassword \
+http://localhost:8080/api/v2/product_types/
+curl --header "Content-Type:application/json" \
+  --header "Accept:application/json" \
+  -X POST --data \
+  '{"name": "Miscellaneous", "critical_product": true, "key_product": true, "authorized_users": []}' \
+  -u admin:AdminPassword \
+http://localhost:8080/api/v2/product_types/
+
+# Check your work at http://localhost:8080/product/type
+
 ```
+
