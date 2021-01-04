@@ -64,7 +64,14 @@ curl --header "Content-Type:application/json" \
   -u admin:AdminPassword \
 http://localhost:8080/api/v2/product_types/
 
-# Check your work at http://localhost:8080/product/type
+# Browse the product types at http://localhost:8080/product/type
+
+# How to some test types, Anchore is already in http://localhost:8080/test_type , so not needed at this time
+# curl --header "Content-Type:application/json" \
+#  --header "Accept:application/json" \
+#  -X POST --data \
+#  '{"tags": [ "tag123" ], "name": "Anchore Scan", "static_tool": true, "dynamic_tool": false}' \
+#  -u admin:AdminPassword http://localhost:8080/api/v2/test_types/
 
 ```
 
