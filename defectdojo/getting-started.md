@@ -43,3 +43,8 @@ rm -rf /opt/gradle
 ```
 
 ## quickstart
+
+```
+# login
+curl --header "Content-Type:application/json" --header "Accept:application/json" -X POST --data '{"username":"admin","password":"MBX..."}' http://localhost:8080/api/v2/api-token-auth/
+```
