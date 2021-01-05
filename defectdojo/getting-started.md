@@ -43,6 +43,36 @@ curl --header "Content-Type:application/json" \
 http://localhost:8080/api/v2/product_types/
 
 # Browse the product types at http://localhost:8080/product/type
+# Once users are added, try again
+curl --header "Content-Type:application/json"   --header "Accept:application/json"   -X POST --data   '{
+  "tags": [
+    "string"
+  ],
+  "name": "string",
+  "description": "string",
+  "prod_numeric_grade": 0,
+  "business_criticality": "very high",
+  "platform": "web service",
+  "lifecycle": "construction",
+  "origin": "third party library",
+  "user_records": 0,
+  "revenue": "string",
+  "external_audience": true,
+  "internet_accessible": true,
+  "product_manager": 0,
+  "technical_contact": 0,
+  "team_manager": 0,
+  "prod_type": 0,
+  "authorized_users": [
+    1
+  ],
+  "regulations": [
+    2
+  ]
+}'   -u admin:MBX0iV42wV4PbkyNlNjoJr http://localhost:8080/api/v2/products/
+
+
+
 
 # How to some test types, Anchore is already in http://localhost:8080/test_type , so not needed at this time
 # curl --header "Content-Type:application/json" \
