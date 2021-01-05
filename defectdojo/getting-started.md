@@ -90,7 +90,9 @@ curl --header "Content-Type:application/json" \
 
 # Browse the product types at http://localhost:8080/product/type
 # Once users are added, try again
-curl --header "Content-Type:application/json"   --header "Accept:application/json"   -X POST --data   '{
+curl --header "Content-Type:application/json" \
+  --header "Accept:application/json" \
+  -X POST --data   '{
   "tags": [
     "string"
   ],
@@ -102,16 +104,14 @@ curl --header "Content-Type:application/json"   --header "Accept:application/jso
   "lifecycle": "construction",
   "origin": "third party library",
   "user_records": 0,
-  "revenue": "string",
+  "revenue": "6000",
   "external_audience": true,
   "internet_accessible": true,
-  "product_manager": 0,
-  "technical_contact": 0,
-  "team_manager": 0,
-  "prod_type": 0,
-  "authorized_users": [
-    1
-  ],
+  "product_manager": 1,
+  "technical_contact": 2,
+  "team_manager": 3,
+  "prod_type": 1,
+  "authorized_users": [],
   "regulations": [
     2
   ]
