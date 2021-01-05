@@ -42,7 +42,11 @@ curl --header "Content-Type:application/json" \
   -u admin:AdminPassword \
 http://localhost:8080/api/v2/product_types/
 
-# Add some users, picked names from: http://donatellanobatti.blogspot.com/2012/02/list.html
+# Add some users:
+#   product_manager
+#   technical_contact
+#   team_manager
+# picked names from: http://donatellanobatti.blogspot.com/2012/02/list.html
 curl --header "Content-Type:application/json" \
   --header "Accept:application/json" \
   -X POST --data \
@@ -88,8 +92,7 @@ curl --header "Content-Type:application/json" \
   -u admin:AdminPassword \
   http://localhost:8080/api/v2/users/
 
-# Browse the product types at http://localhost:8080/product/type
-# Once users are added, try again
+# Create a product
 curl --header "Content-Type:application/json" \
   --header "Accept:application/json" \
   -X POST --data   '{
@@ -117,7 +120,41 @@ curl --header "Content-Type:application/json" \
   ]
 }'   -u admin:AdminPassword http://localhost:8080/api/v2/products/
 
-
+# Create an engagement
+curl --header "Content-Type:application/json"   --header "Accept:application/json"   -X POST --data   '{
+  "tags": [
+    "string"
+  ],
+  "name": "string",
+  "description": "string",
+  "version": "string",
+  "first_contacted": "2021-01-05",
+  "target_start": "2021-01-05",
+  "target_end": "2021-01-05",
+  "reason": "string",
+  "tracker": "https://bugs.example.com",
+  "test_strategy": "https://tests.example.com",
+  "threat_model": true,
+  "api_test": true,
+  "pen_test": true,
+  "check_list": true,
+  "status": "Not Started",
+  "engagement_type": "Interactive",
+  "build_id": "string",
+  "commit_hash": "string",
+  "branch_tag": "string",
+  "source_code_management_uri": "https://gitlab.example.com",
+  "deduplication_on_engagement": true,
+  "eng_type": "",
+  "lead": 1,
+  "requester": "",
+  "preset": "",
+  "report_type": "",
+  "product": 1,
+  "build_server": "",
+  "source_code_management_server": "",
+  "orchestration_engine": ""
+}'   -u admin:AdminPassword   http://localhost:8080/api/v2/engagements/
 
 
 # How to some test types, Anchore is already in http://localhost:8080/test_type , so not needed at this time
