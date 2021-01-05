@@ -69,7 +69,7 @@ curl --header "Content-Type:application/json"   --header "Accept:application/jso
   "regulations": [
     2
   ]
-}'   -u admin:MBX0iV42wV4PbkyNlNjoJr http://localhost:8080/api/v2/products/
+}'   -u admin:AdminPassword http://localhost:8080/api/v2/products/
 
 
 
