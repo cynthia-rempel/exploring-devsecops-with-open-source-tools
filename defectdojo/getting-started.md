@@ -42,6 +42,52 @@ curl --header "Content-Type:application/json" \
   -u admin:AdminPassword \
 http://localhost:8080/api/v2/product_types/
 
+# Add some users, picked names from: http://donatellanobatti.blogspot.com/2012/02/list.html
+curl --header "Content-Type:application/json" \
+  --header "Accept:application/json" \
+  -X POST --data \
+  '{
+      "username": "mario.speedwagon",
+      "first_name": "mario",
+      "last_name": "speedwagon",
+      "email": "mario.speedwagon@example.com",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false
+  }' \
+  -u admin:AdminPassword \
+  http://localhost:8080/api/v2/users/
+
+curl --header "Content-Type:application/json" \
+  --header "Accept:application/json" \
+  -X POST --data \
+  '{
+      "username": "anna.sthesia",
+      "first_name": "anna",
+      "last_name": "sthesia",
+      "email": "anna.sthesia@example.com",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false
+  }' \
+  -u admin:AdminPassword \
+  http://localhost:8080/api/v2/users/
+
+curl --header "Content-Type:application/json" \
+  --header "Accept:application/json" \
+  -X POST --data \
+  '{
+      "username": "anna.mull",
+      "first_name": "anna",
+      "last_name": "mull",
+      "email": "anna.mull@example.com",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false
+  }' \
+  -u admin:AdminPassword \
+  http://localhost:8080/api/v2/users/
+
 # Browse the product types at http://localhost:8080/product/type
 # Once users are added, try again
 curl --header "Content-Type:application/json"   --header "Accept:application/json"   -X POST --data   '{
