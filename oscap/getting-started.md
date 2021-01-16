@@ -28,3 +28,13 @@ sudo oscap-docker image docker.io/library/ubuntu:18.04 oval eval \
 sudo chown myuser:mygroup report.html
 firefox report.html
 ```
+### XCCDF
+```
+sudo oscap-docker image docker.io/library/ubuntu:18.04 xccdf eval \
+   --results xccdf-results.xml \
+   --fetch-remote-resources \
+   --profile xccdf_org.ssgproject.content_profile_cis \
+   /usr/share/xml/scap/ssg/content/ssg-ubuntu1804-ds-1.2.xml
+oscap xccdf generate report xccdf-results.xml > report-xccdf.html
+firefox report-xccdf.html
+```
