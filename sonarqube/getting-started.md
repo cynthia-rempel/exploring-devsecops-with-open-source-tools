@@ -28,6 +28,20 @@ sonar.projectKey=my:project
 ```
 # Using the scanner
 ```
+sonarqube/sonar-scanner-4.5.0.2216/bin/sonar-scanner
+```
+ 
+ ## Generate the report
+ ```
+ sonar-report \
+  --sonarurl="http://localhost:9000" \
+  --sonarcomponent="sopra-steria:soprasteria_sonar-report" \
+  --project="my:project" \
+  --application="sonar-report" \
+  --release="1.0.0" \
+  --branch="feature/branch" \
+  --sinceleakperiod="false" \
+  --allbugs="false"
  ```
  ## References:
  https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
