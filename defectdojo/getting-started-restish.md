@@ -30,4 +30,6 @@ PRODUCT_TYPE_ID=`curl http://admin:password@127.0.0.1:8080/api/v2/product_types/
 PRODUCT_ID=`curl http://admin:password@127.0.0.1:8080/api/v2/products/ | jq '.results[] | select (.name=="bugtrac") | .id'`
 
 ~/go/bin/restish post http://admin:password@127.0.0.1:8080/api/v2/engagements/ product: $PRODUCT_ID, target_start: `date +%Y-%m-%d`, target_end: `date +%Y-%m-%d -d +7day`
+
+curl -X POST "http://localhost:8080/api/v2/import-scan/" -u admin:password -F "engagement=1" -F "scan_type=Anchore Engine Scan" -F "file=@debian_7.json;type=application/json"
 ```
