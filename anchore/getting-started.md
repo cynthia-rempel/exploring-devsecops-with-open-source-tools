@@ -25,6 +25,9 @@ docker-compose exec api anchore-cli system status
 
 # check the status of the feeds
 docker-compose exec api anchore-cli system feeds list
+
+# set the admin password to admin (don't do this for production)
+docker-compose exec api anchore-cli account user setpassword admin
 ```
 ### Smoke test the install
 Once the relevant feeds are sync'd start a second terminal
